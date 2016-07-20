@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="pl">
+<html lang="pl" ng-app="CarazemApp">
 <head>
     <meta charset="utf-8" />
     <title>Carazem</title>
@@ -13,8 +13,6 @@
 </head>
 <body>
 <div class="app app-header-fixed ">
-
-
     <!-- header -->
     <header id="header" class="app-header navbar" role="menu">
         <!-- navbar header -->
@@ -180,10 +178,10 @@
             <!-- / link and dropdown -->
 
             <!-- search form -->
-            <form class="navbar-form navbar-form-sm navbar-left shift" ui-shift="prependTo" data-target=".navbar-collapse" role="search" ng-controller="TypeaheadDemoCtrl">
+            <form class="navbar-form navbar-form-sm navbar-left shift" ui-shift="prependTo" data-target=".navbar-collapse" role="search">
                 <div class="form-group">
                     <div class="input-group">
-                        <input type="text" ng-model="selected" typeahead="state for state in states | filter:$viewValue | limitTo:8" class="form-control input-sm bg-light no-border rounded padder" placeholder="Search projects...">
+                        <input type="text" typeahead="state for state in states | filter:$viewValue | limitTo:8" class="form-control input-sm bg-light no-border rounded padder" placeholder="Search projects...">
               <span class="input-group-btn">
                 <button type="submit" class="btn btn-sm bg-light rounded"><i class="fa fa-search"></i></button>
               </span>
@@ -340,10 +338,7 @@
         <div class="app-content-body ">
 
 
-            <div class="hbox hbox-auto-xs hbox-auto-sm" ng-init="
-    app.settings.asideFolded = false; 
-    app.settings.asideDock = false;
-  ">
+            <div class="hbox hbox-auto-xs hbox-auto-sm">
                 <!-- main -->
                 <div class="col">
                     <!-- main header -->
@@ -351,30 +346,14 @@
                         <div class="row">
                             <div class="col-sm-12 col-xs-12">
                                 <h1 class="m-n font-thin h3 text-black">Home</h1>
-                                <small class="text-muted">Chyba działa?</small>
+                                <div ui-view></div>
                             </div>
                         </div>
                     </div>
                     <!-- / main header -->
-                    <div class="wrapper-md" ng-controller="FlotChartDemoCtrl">
-                        <!-- stats -->
-                        <div class="row">
-                            <div class="col-md-12">
-                                Tutaj tekścik
-                            </div>
 
-                        </div>
-                        <!-- / stats -->
-
-
-
-
-                    </div>
                 </div>
             </div>
-
-
-
         </div>
     </div>
     <!-- /content -->
@@ -397,6 +376,6 @@
 <script src="assets/js/ui-load.js"></script>
 <script src="assets/js/ui-nav.js"></script>
 <script src="assets/js/ui-toggle.js"></script>
-
+<script type="text/javascript" src="bundle.js" charset="utf-8"></script>
 </body>
 </html>

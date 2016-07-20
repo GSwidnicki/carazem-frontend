@@ -5,10 +5,17 @@
   "engines": {
     "node": "4.1.1"
   },
+  "scripts":{
+    "build" : "webpack" ,
+    "watch" : "webpack --watch"
+  },
   "dependencies": {
     "angular": "^1.5.7",
     "angular-resource": "^1.5.7",
     "angular-ui-router": "^0.3.1",
     "express": "^4.14.0"
+  },
+  "devDependencies": {
+    "webpack": "^1.13.1"
   }
 }

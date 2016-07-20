@@ -1,11 +1,10 @@
-module.exports = angular.module("CarazemApp.search-ride",[])
+module.exports = angular.module("CarazemApp.searchride",[])
     .config(function ($stateProvider) {
         $stateProvider
-            .state("searchRide", {
+            .state("searchride", {
                 url: '/',
-                templateUrl: '',
-                controller: "",
-                controllerAs: ""
+                templateUrl: 'modules/search-ride/view/search-ride-form.html'
             })
     })
+    .controller("SearchRideSearchCtrl", require("./controller/search-ride.search.ctrl"))
 ;
