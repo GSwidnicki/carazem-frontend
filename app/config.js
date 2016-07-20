@@ -6,4 +6,4 @@ module.exports = function ($stateProvider, $urlRouterProvider) {
             abstract: true,
             url: ''
         })
-}
+};
