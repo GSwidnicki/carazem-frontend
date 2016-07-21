@@ -2164,7 +2164,10 @@ fieldset[disabled] .btn-black.active {
   background-color: rgba(0, 0, 0, 0.1);
   border-radius: 2px 0 0 2px;
 }
-
+.btn-success.btn-lg
+{
+  width:100% !important;
+}
 .btn-addon i.pull-right {
   margin-right: -12px;
   margin-left: 12px;
@@ -2806,6 +2809,10 @@ fieldset[disabled] .i-checks input + i:before {
 
 .form-validation .i-checks .ng-invalid.ng-dirty + i {
   border-color: #f05050;
+}
+input.form-control {
+
+  width: 100% !important;
 }
 
 .ng-animate .bg-auto:before {
