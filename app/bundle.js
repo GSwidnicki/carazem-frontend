@@ -36998,16 +36998,18 @@
 /* 6 */
 /***/ function(module, exports, __webpack_require__) {
 
-	module.exports = angular.module("CarazemApp.searchride",[])
+	module.exports = angular.module("CarazemApp.searchride",['google.places'])
 	    .config(function ($stateProvider) {
+	        console.log("in config")
 	        $stateProvider
 	            .state("searchride", {
 	                url: '/',
-	                templateUrl: 'modules/search-ride/view/search-ride-form.html'
+	                templateUrl: 'modules/search-ride/view/search-ride-form.html',
+	                controller: "SearchRideSearchCtrl",
+	                controllerAs: "ctrl"
 	            })
 	    })
-	    .controller("SearchRideSearchCtrl", __webpack_require__(7))
-	;
+	    .controller("SearchRideSearchCtrl", __webpack_require__(7));
 
 /***/ },
 /* 7 */
@@ -37015,6 +37017,7 @@
 
 	module.exports = function () {
 	    console.log("I'm searching!");
+	    this.place = null;
 	};
 
 /***/ },
