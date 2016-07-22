@@ -6,6 +6,7 @@
     "node": "4.1.1"
   },
   "scripts":{
+    "postinstall": "webpack",
     "build" : "webpack" ,
     "watch" : "webpack --watch"
   },
