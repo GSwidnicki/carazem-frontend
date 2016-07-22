@@ -14,9 +14,7 @@
     "angular": "^1.5.7",
     "angular-resource": "^1.5.7",
     "angular-ui-router": "^0.3.1",
-    "express": "^4.14.0"
-  },
-  "devDependencies": {
+    "express": "^4.14.0",
     "webpack": "^1.13.1"
   }
 }
