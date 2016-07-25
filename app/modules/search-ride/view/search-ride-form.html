@@ -8,7 +8,9 @@
 <div class="wrapper-md text-center">
     <form class="form-inline" role="form">
             <div class="col-md-4">
-                <input type="text" class="form-control input-lg" placeholder="Skąd" aria-describedby="basic-addon2" g-places-autocomplete ng-model="ctrl.place">
+                <input type="text" options = "{types: ['(cities)']}";
+
+                class="form-control input-lg" placeholder="Skąd" aria-describedby="basic-addon2" g-places-autocomplete ng-model="ctrl.place">
             </div>
             <div class="col-md-4">
                 <input type="text" class="form-control input-lg" id="exampleInputPassword2" placeholder="Dokąd">
@@ -29,3 +31,5 @@
         </form>
 
  </div>
+
+{{ctrl.place || city}}
