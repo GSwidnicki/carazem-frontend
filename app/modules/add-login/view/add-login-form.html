@@ -1,0 +1,38 @@
+<div class="bg-light lter b-b wrapper-md text-center">
+    <div class="row">
+        <div class="col-sm-12 col-xs-12">
+            <h1 class="m-n font-thin h1 text-black">Logowanie</h1>
+        </div>
+    </div>
+</div>
+<div class="container w-xxl w-auto-xs" ng-controller="SignupFormController" ng-init="app.settings.container = false;">
+    <a href class="navbar-brand block m-t"></a>
+    <div class="m-b-lg">
+        <form name="form" class="form-validation">
+            <div class="text-danger wrapper text-center" ng-show="authError">
+
+            </div>
+            <div class="list-group list-group-sm">
+                <div class="list-group-item">
+                    <input placeholder="Name" class="form-control no-border" ng-model="user.name" required>
+                </div>
+                <div class="list-group-item">
+                    <input type="email" placeholder="Email" class="form-control no-border" ng-model="user.email" required>
+                </div>
+                <div class="list-group-item">
+                    <input type="password" placeholder="Password" class="form-control no-border" ng-model="user.password" required>
+                </div>
+            </div>
+            <div class="checkbox m-b-md m-t-none">
+                <label class="i-checks">
+                    <input type="checkbox" ng-model="agree" required><i></i>Zapamiętaj mnie</a>
+                </label>
+            </div>
+            <button type="submit" class="btn btn-lg btn-primary btn-block" ng-click="signup()" ng-disabled='form.$invalid'>Zalogu się</button>
+            <div class="line line-dashed"></div>
+            <p class="text-center"><small>Nie posiadasz jeszcze konta?</small></p>
+            <a ui-sref="access.signin" class="btn btn-lg btn-default btn-block">Zarejestruj się</a>
+        </form>
+    </div>
+</div>
+
