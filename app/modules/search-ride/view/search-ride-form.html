@@ -7,24 +7,28 @@
 </div>
 <div class="wrapper-md text-center">
     <form class="form-inline" role="form">
-            <div class="col-md-4">
-                <input type="text" class="form-control input-lg" placeholder="Skąd" aria-describedby="basic-addon2" g-places-autocomplete ng-model="ctrl.place">
-            </div>
-            <div class="col-md-4">
-                <input type="text" class="form-control input-lg" id="exampleInputPassword2" placeholder="Dokąd" aria-describedby="basic-addon2" g-places-autocomplete ng-model="ctrl.toPlace">
-            </div>
-            <div class="col-md-2">
-                <div class="form-group">
-                    <div class='input-group date' id='datetimepicker1'>
-                        <input type='text' class="form-control input-lg" />
+        <div class="col-md-4">
+            <input type="text" class="form-control input-lg" placeholder="Skąd" aria-describedby="basic-addon2" g-places-autocomplete ng-model="ctrl.place">
+        </div>
+        <div class="col-md-4">
+            <input type="text" class="form-control input-lg" id="exampleInputPassword2" placeholder="Dokąd" aria-describedby="basic-addon2" g-places-autocomplete ng-model="ctrl.toPlace">
+        </div>
+        <div class="col-md-2">
+            <div class="form-group">
+                <div class='input-group date' id='datetimepicker1'>
+                    <input type='text' class="form-control input-lg" />
                     <span class="input-group-addon">
                         <span class="glyphicon glyphicon-calendar"></span>
                     </span>
-                    </div>
                 </div>
             </div>
-                <div class="col-md-2">
-          <button class="btn btn-success btn-lg">Szukaj</button>
-            </div>
-        </form>
- </div>
+        </div>
+        <div class="col-md-2">
+            <button class="btn btn-success btn-lg">Szukaj</button>
+        </div>
+    </form>
+</div>
+
+
+<!--<div ng-bind="ctrl.place.address_components[0].long_name" style="font-size:30px"></div>
+<div ng-bind="ctrl.toPlace.address_components[0].long_name" style="font-size:30px"></div>-->

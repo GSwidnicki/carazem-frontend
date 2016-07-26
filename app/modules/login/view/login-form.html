@@ -5,7 +5,7 @@
         </div>
     </div>
 </div>
-<div class="container w-xxl w-auto-xs" ng-controller="SignupFormController" ng-init="app.settings.container = false;">
+<div class="container w-xxl w-auto-xs" >
     <a href class="navbar-brand block m-t"></a>
     <div class="m-b-lg">
         <form name="form" class="form-validation">
@@ -28,7 +28,7 @@
                     <input type="checkbox" ng-model="agree" required><i></i>Zapamiętaj mnie</a>
                 </label>
             </div>
-            <button type="submit" class="btn btn-lg btn-primary btn-block" ng-click="signup()" ng-disabled='form.$invalid'>Zalogu się</button>
+            <button type="submit" class="btn btn-lg btn-primary btn-block" ng-click="signup()" >Zalogu się</button>
             <div class="line line-dashed"></div>
             <p class="text-center"><small>Nie posiadasz jeszcze konta?</small></p>
             <a ui-sref="access.signin" class="btn btn-lg btn-default btn-block">Zarejestruj się</a>
