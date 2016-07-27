@@ -8,10 +8,13 @@
 <div class="wrapper-md text-center">
     <form class="form-inline" role="form">
         <div class="col-md-4">
-            <input type="text" class="form-control input-lg" placeholder="Skąd" aria-describedby="basic-addon2" g-places-autocomplete ng-model="ctrl.place">
+            <input type="text" options = "{types: ['(cities)']}";
+
+                   class="form-control input-lg" placeholder="Skąd" aria-describedby="basic-addon2" g-places-autocomplete ng-model="ctrl.placeFrom">
         </div>
         <div class="col-md-4">
-            <input type="text" class="form-control input-lg" id="exampleInputPassword2" placeholder="Dokąd" aria-describedby="basic-addon2" g-places-autocomplete ng-model="ctrl.toPlace">
+            <input type="text" options = "{types: ['(cities)']}";
+            <input type="text" class="form-control input-lg" id="exampleInputPassword2" placeholder="Dokąd" g-places-autocomplete ng-model="ctrl.placeTo">
         </div>
         <div class="col-md-2">
             <div class="form-group">
@@ -24,11 +27,7 @@
             </div>
         </div>
         <div class="col-md-2">
-            <button class="btn btn-success btn-lg">Szukaj</button>
+            <button class="btn btn-success  btn-lg ">Szukaj</button>
         </div>
     </form>
 </div>
-
-
-<!--<div ng-bind="ctrl.place.address_components[0].long_name" style="font-size:30px"></div>
-<div ng-bind="ctrl.toPlace.address_components[0].long_name" style="font-size:30px"></div>-->
