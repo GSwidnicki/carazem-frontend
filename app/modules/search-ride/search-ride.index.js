@@ -8,4 +8,4 @@ module.exports = angular.module("CarazemApp.searchride",['google.places'])
                 controllerAs: "ctrl"
             })
     })
-    .controller("SearchRideSearchCtrl", require("./controller/search-ride.search.ctrl"));
+    .controller("SearchRideSearchCtrl", require("./controller/search-ride.search.ctrl"))
