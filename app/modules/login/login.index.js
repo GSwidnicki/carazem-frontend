@@ -1,8 +1,8 @@
-module.exports = angular.module("CarazemApp.login",['google.places'])
+module.exports = angular.module("CarazemApp.login",[])
     .config(function ($stateProvider) {
         $stateProvider
             .state("login", {
                 url: '/login',
-                templateUrl: 'modules/login/view/login-form.html',
+                templateUrl: 'modules/login/view/login-form.html'
             })
     });
