@@ -1,6 +1,11 @@
-module.exports = function (Ride, $state, toaster) {
+module.exports = function (Ride, $state, toaster, $scope) {
     function getCity(place){
-        return place.address_components[0].long_name;
+        try {
+            return place.address_components[0].long_name;
+        } catch (e) {
+            return place;
+        }
+
     };
 
     this.addRide = function() {
@@ -9,7 +14,7 @@ module.exports = function (Ride, $state, toaster) {
         console.log(this.ride);
         Ride.save({}, this.ride, function () {
             toaster.pop('success', "Sukces!", "Dodano przejazd!");
-            $state.go('addedRide');
+            // $state.go('addedRide');
         }, function () {
             toaster.pop('error', "Błąd!", "Wystąpił błąd serwisu!");
         });

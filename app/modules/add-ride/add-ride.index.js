@@ -1,4 +1,4 @@
-module.exports = angular.module("CarazemApp.addride",['google.places'])
+module.exports = angular.module("CarazemApp.addride",['google.places', 'CarazemApp.login'])
     .config(function ($stateProvider) {
         $stateProvider
             .state("addride", {
@@ -8,5 +8,9 @@ module.exports = angular.module("CarazemApp.addride",['google.places'])
                 controllerAs: "ctrl"
             })
     })
+    // .config(function($httpProvider, myauth) {
+    //     console.log('hehi', myauth)
+    //     $httpProvider.defaults.headers.post  = { 'X-AUTH-TOKEN': myauth.idToken };
+    // })
     .controller("AddRideCtrl", require("./controller/add-ride.index"))
     .factory("Ride", require("./factory/ride.factory.js"));
