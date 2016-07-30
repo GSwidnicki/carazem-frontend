@@ -3,6 +3,7 @@ require("angular-resource");
 require("angular-ui-router");
 require("angular-animate");
 require("angularjs-toaster");
+require("angularjs-datetime-picker");
 //require("firebase");
 //require("angularfire");
 require("./modules/search-ride/search-ride.index");
@@ -21,7 +22,7 @@ angular.injector(['ng']).get("$http").get("/config").then(function (res) {
         'CarazemApp.login'
     ])
         .config(require("./config"))
-        .constant('BASE_URL', res.data.backend || 'http://carazem-api.herokuapp.com');
+        .constant('BASE_URL', res.data.backend || 'http://localhost:8086');
 
     angular.element(document).ready(function () {
         /*var config = {

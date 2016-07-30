@@ -1,4 +1,4 @@
-module.exports = angular.module("CarazemApp.searchride",['google.places'])
+module.exports = angular.module("CarazemApp.searchride",['google.places', 'angularjs-datetime-picker'])
     .config(function ($stateProvider) {
         $stateProvider
             .state("searchride", {
@@ -9,3 +9,4 @@ module.exports = angular.module("CarazemApp.searchride",['google.places'])
             })
     })
     .controller("SearchRideSearchCtrl", require("./controller/search-ride.search.ctrl"))
+    .factory("Ride", require("../add-ride/factory/ride.factory.js"))
