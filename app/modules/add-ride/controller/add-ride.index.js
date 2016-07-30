@@ -1,4 +1,4 @@
-module.exports = function (Ride, $state, toaster) {
+module.exports = function (Ride, $state, toaster, $scope) {
     function getCity(place){
         try {
             return place.address_components[0].long_name;
