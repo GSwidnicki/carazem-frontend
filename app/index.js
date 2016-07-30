@@ -21,7 +21,7 @@ angular.injector(['ng']).get("$http").get("/config").then(function (res) {
         'CarazemApp.login'
     ])
         .config(require("./config"))
-        .constant('BASE_URL', res.data.backend || 'http://carazem-api.herokuapp.com')
+        .constant('BASE_URL', res.data.backend || 'https://carazem-api.herokuapp.com')
         .constant('AUTH', {})
         .config(function($httpProvider, AUTH) {
             $httpProvider.defaults.headers.post  = AUTH;

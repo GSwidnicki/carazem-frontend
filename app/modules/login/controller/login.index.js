@@ -4,7 +4,7 @@ module.exports = function ($firebaseAuth, $http, AUTH, BASE_URL) {
     auth.$signInWithPopup("google").then(function(firebaseUser) {
         console.log("Signed in as:", firebaseUser.user.email);
         AUTH['X-AUTH-TOKEN'] = firebaseUser.credential.idToken;
-        // $http.get(BASE_URL+'/login', AUTH);
+        //$http.get(BASE_URL+'/login', AUTH);
         var url = BASE_URL + '/login';
         $http.get(url, { headers: AUTH });
 
